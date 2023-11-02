@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mitr', sans-serif;
+  overflow-y: hidden;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 150px;
+  background-color: #ccc7d5;
+  flex-shrink: 0;
+}
+
+.main {
+  flex: 1;
+  background-color: #e2dee7;
+  overflow: hidden;
+}
+
+.header {
+  height: 75px;
+  background-image: linear-gradient(60deg,#2E4C9D 32%,#E64027 80%);
+  color: white;
+  padding-top: 15px;
+  padding-left: 30px;
+
+}
+
+.btnblock {
+  display: flex;
+  position: absolute;
+  gap: 10px;
+  top: 15px;
+  left: 200px;
+  cursor: pointer;
+}
+
+.btn:is(:hover, .active) {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.btn {
+  width: 200;
+  background: #909cc1;
+  border-radius: 7px;
+  border: 1px solid #1d3885;
+  padding: 10px;
+
+}
+
+#Export {
+  font-size: 16px;
+  color: #ffffff;
+  background: #d8948a;
+  position: absolute;
+  padding: 10px;
+  border-radius: 15px;
+  top: 15px;
+  right: 100px;
+  cursor: pointer;
+  border: 1px solid #bf2f18;
+}
+
+#Export:is(:hover, .active) {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.scrollmenu {
+  background-image: linear-gradient(60deg,#909cc1 32%,#be938c 80%);
+  overflow: auto;
+  white-space: nowrap;
+  height: 75px;
+  color: white;
+  text-align: center;
+  overflow-y: hidden;
+
+}
+
+.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  font-size: large;
+}
+
+.scrollmenu a:hover {
+  background-color: #777;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+.buttons button {
+  width: 50%;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 11px 0;
+  font-size: 0.9rem;
+  margin-bottom: 1px;
+  margin-left: 25%;
+  background: none;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-top: 20%;
+}
+
+.buttons :active {
+  background-color: #32373a;
+  color: #fff;
+}
+
+
+.clear-canvas {
+  width: 55%;
+  margin-left: 20%;
+  margin-top: 260%;
+  font-size: 0.9rem;
+  color: #6d6c7d;
+  border: 1px solid #6d6c7d;
+  transition: all 0.3s ease;
+  border-radius: 7px;
+  font-size: 0.9rem;
+  background: none;
+  padding: 10px;
+  transition: all 0.3s ease
+}
+
+.clear-canvas:hover {
+  color: #fff;
+  background: #6d6c7d;
+  transition: all 0.3s ease
+}
+
+.clear-canvas.active {
+  background-color: #32373a;
+  color: #fff;
+  transform: translateY(2px);
+}
+
+
+#Brush {
+  color: #6d6c7d;
+  border: 1px solid #6d6c7d;
+  transition: all 0.3s ease;
+}
+
+#Brush:hover {
+  color: #fff;
+  background: #6d6c7d;
+  transform: translateY(2px);
+}
+
+#Brush:active {
+  background: #6C757D;
+  color: #fff;
+}
+
+#Brush:focus {
+  background: #47474f;
+  color: #fff;
+}
+
+
+#Eraser {
+  color: #6d6c7d;
+  border: 1px solid #6d6c7d;
+  transition: all 0.3s ease;
+}
+
+#Eraser:hover {
+  color: #fff;
+  background: #6d6c7d;
+  transform: translateY(2px);
+}
+
+#Eraser:active {
+  background: #6C757D;
+  color: #fff;
+}
+
+#Eraser:focus {
+  background: #47474f;
+  color: #fff;
+}
+
+
+#Pentool {
+  color: #6C757D;
+  border: 1px solid #6C757D;
+  transition: all 0.3s ease;
+}
+
+#Pentool:hover {
+  color: #fff;
+  background: #6C757D;
+  transform: translateY(2px);
+}
+
+#Pentool:focus {
+  background: #32373a;
+  color: #fff;
+}
+
+
+.slide {
+  position: absolute;
+  right: 5%;
+  top: 350px;
+  padding: 7px;
+  border: 2px solid #6d6c7d;
+  border-radius: 20px;
+
+}
+
+input[type=range][orient=vertical] {
+  writing-mode: bt-lr;
+  /* IE */
+  -webkit-appearance: slider-vertical;
+  /* Chromium */
+  width: 10px;
+  height: 200px;
+  padding: 0 10px;
+}
+
+canvas {
+  background-image: url('Canvas.png');
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Logo {
+  background-image: url('PJO.png');
+  background-size: cover;
+  position: absolute;
+  width: 150px;
+  height: 50px;
+}
