@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "fontforge": "^0.0.4"
+  }
+}
